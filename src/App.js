@@ -1,3 +1,5 @@
+// Nothing special happens here. Just import compendium and call it in app.js
+
 import logo from './logo.svg';
 import './App.css';
 
