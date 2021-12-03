@@ -1,7 +1,8 @@
 // This is where everything will be displayed.
 import React from 'react'
 import { useState, useEffect } from 'react';
-import fetchAPIData from '../../services/example.jsx';
+import DisplayList from '../../components/DisplayList/DisplayList.jsx';
+import fetchAPIData from '../../services/pokemon-api.jsx';
 // import data fetching function here.
 
 export default function Compendium() {
@@ -20,8 +21,8 @@ export default function Compendium() {
     }, [])
 
     return (
-        <div>
-           { isLoading ? <h1>Loading...</h1> : <h1>{JSON.stringify(dataArr)}</h1> }
-        </div>
+        <section>
+           { isLoading ? <h1>Loading...</h1> : <DisplayList dataArr={dataArr}/> }
+        </section>
     )
 }
