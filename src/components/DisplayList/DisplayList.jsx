@@ -3,10 +3,12 @@ import DisplayCard from '../DisplayCard/DisplayCard.jsx'
 
 export default function DisplayList({dataArr}) {
     return (
-        <>
-            {
-                dataArr.map(dataObj => <DisplayCard  key={dataObj.pokemon} dataObj={dataObj} /> )
-            }
-        </>
+        <section>
+            <ul>   
+                {
+                    dataArr.map(dataObj => <li key={dataObj.pokemon}> <DisplayCard dataObj={dataObj} /> </li>)
+                }
+            </ul>
+        </section>
     )
 }
