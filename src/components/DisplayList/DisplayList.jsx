@@ -1,5 +1,6 @@
-import React from 'react'
-import DisplayCard from '../DisplayCard/DisplayCard.jsx'
+import React from 'react';
+import DisplayCard from '../DisplayCard/DisplayCard.jsx';;
+
 
 export default function DisplayList({dataArr}) {
     return (

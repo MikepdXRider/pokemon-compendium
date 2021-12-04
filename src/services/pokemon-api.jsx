@@ -1,5 +1,7 @@
 // This is where fetch functions live. Services folder holds any code that is responsible for interacting with services outside of this system/application.
 
+import mungeData from "../utils/mungeData.jsx";
+
 
 /**
  * Fetches API data
@@ -11,7 +13,9 @@ export async function fetchAPIData() {
 
     const dataObj = await response.json()
    
-    return dataObj.results
+    const mungedData = dataObj.results.map(childDataObj => mungeData(childDataObj))
+
+    return mungedData;
 }
 
 /**
@@ -40,7 +44,9 @@ export async function fetchAPIDataByType(typeStr) {
     
     const dataObj = await response.json();
 
-    return dataObj.results;
+    const mungedData = dataObj.results.map(childDataObj => mungeData(childDataObj))
+
+    return mungedData;
 }
 
 /**
@@ -54,5 +60,7 @@ export async function fetchAPIDataByOrder(sortOrderStr) {
 
     const dataObj = await response.json();
 
-    return dataObj.results;
+    const mungedData = dataObj.results.map(childDataObj => mungeData(childDataObj))
+
+    return mungedData;
 }
