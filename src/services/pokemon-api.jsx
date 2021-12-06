@@ -1,6 +1,6 @@
 // This is where fetch functions live. Services folder holds any code that is responsible for interacting with services outside of this system/application.
 
-import mungeData from "../utils/mungeData.jsx";
+import mungeData from "../utils/munge-data.jsx";
 
 
 /**
