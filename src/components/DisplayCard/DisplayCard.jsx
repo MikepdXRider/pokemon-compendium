@@ -14,6 +14,7 @@ export default function DisplayCard({ dataObj }) {
     )
 }
 
+// https://reactjs.org/docs/typechecking-with-proptypes.html
 DisplayCard.propTypes = {
     pokemon: PropTypes.string,
     url_image: PropTypes.string,
